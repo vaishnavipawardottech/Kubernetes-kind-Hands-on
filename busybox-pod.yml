@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: nginx-ns
+
+spec:
+  containers:
+    - name: busybox
+      image: busybox:latest
+      command: ["sh", "-c", "echo Hello from Busybox && sleep 3600"]
